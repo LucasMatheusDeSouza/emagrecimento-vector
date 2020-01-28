@@ -1,8 +1,8 @@
 package br.com.vectorconsultoria.emagrecimento.test;
 import br.com.vectorconsultoria.emagrecimento.dominio.CalculaDeficit;
 import br.com.vectorconsultoria.emagrecimento.dominio.Cliente;
+import br.com.vectorconsultoria.emagrecimento.dominio.Formulario;
 import br.com.vectorconsultoria.emagrecimento.dominio.Homem;
-import br.com.vectorconsultoria.emagrecimento.dominio.Mulher;
 
 public class Teste {
 
@@ -18,9 +18,10 @@ public class Teste {
 		
 		CalculaDeficit cd = new CalculaDeficit();
 		cd.calculaDeficitBasal(homem);
-		homem.calculaSemanas();
-		homem.mostraEvolucao();
 		
+		homem.mostraEvolucao();
+		Formulario form = new Formulario();
+		form.verificaGenero(homem);
 	
 		
 				

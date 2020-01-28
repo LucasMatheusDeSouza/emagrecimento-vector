@@ -20,7 +20,15 @@ public abstract class Pessoa {
 	}
 
 	public void setIdade(int idade) {
-		this.idade = idade;
+		if (idade >= 18 && idade <= 65) {
+			this.idade = idade;
+		}
+		
+		while (idade < 18 || idade > 65) {
+			System.out.println("idade invalida digite novamente");
+			this.setIdade(idade);
+		}
+
 	}
 
 	public int getAltura() {

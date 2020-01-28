@@ -20,10 +20,6 @@ public abstract class Cliente extends Pessoa {
 	}
 
 	// tempo em semanas para atingir o resultado
-	public void calculaSemanas() {
-		double peso = super.getPesoInicial() - this.quantoQueroPesar;
-		System.out.println("Perdendo " + this.quilosPorSemana + " por semana levará " + peso / this.quilosPorSemana + " semanas");
-	}
 
 	public double getQuilosPorSemana() {
 		return quilosPorSemana;
@@ -32,6 +28,9 @@ public abstract class Cliente extends Pessoa {
 	public void mostraEvolucao() {
 		int semanas = 0;
 
+		double peso = super.getPesoInicial() - this.quantoQueroPesar;
+		System.out.println(
+				"Perdendo " + this.quilosPorSemana + " por semana levará " + peso / this.quilosPorSemana + " semanas para chegar em " + quantoQueroPesar + "kg");
 		for (double x = super.getPesoInicial(); x >= quantoQueroPesar; x -= this.quilosPorSemana) {
 			System.out.println("semana " + semanas + " " + x + " peso");
 			semanas++;

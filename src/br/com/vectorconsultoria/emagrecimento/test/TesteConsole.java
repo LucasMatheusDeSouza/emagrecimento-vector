@@ -16,6 +16,8 @@ public class TesteConsole {
 		System.out.println("Informe seu sexo ");
 		String genero = in.nextLine();
 		clear();
+		
+		//complexidade 
 		if(genero.toString()=="M".toString()) {
 			System.out.println("sexo masculino ");	
 		}
